@@ -1,0 +1,6 @@
+---
+- name: Install apache, mysql, and php
+  hosts: ubuntu
+
+  roles:
+    - amp

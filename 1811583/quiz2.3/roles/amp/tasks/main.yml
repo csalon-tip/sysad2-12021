@@ -1,0 +1,26 @@
+---
+# tasks file for ./roles/amp
+
+  - name: install apache
+    apt:
+     name: apache2
+     state: latest
+     update_cache: yes
+
+  - name: http traffic
+    ufw:
+     rule: allow
+     direction: in
+     name: Apache
+
+  - name: Mysql
+    apt:
+      name: mysql-server
+      state: latest
+
+  - name: php
+    apt:
+       name:
+         - php
+         - libapache2-mod-php
+         - php-mysql
