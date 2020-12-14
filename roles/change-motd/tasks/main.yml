@@ -1,0 +1,4 @@
+---
+- name: welcome
+  command: sh -c 'echo "Hello vlog welcome to my guys - {{ username }}" > /etc/motd'
+# tasks file for ./roles/change-motd
