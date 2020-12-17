@@ -1,0 +1,12 @@
+---
+
+- name: installs ftp
+  hosts: ubuntu
+
+  tasks:
+
+  - name: vsftpd install
+    apt:
+      name: vsftpd
+      state: latest
+      update_cache: yes
