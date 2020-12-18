@@ -10,6 +10,11 @@
       state: latest
       update_cache: yes
 
+   - name: allowing apche in firewall
+     ufw:
+      rule: allow
+      direction: in
+      name: 'Apache'
    - name: creating directory for website
      file:
       name: /var/www/directory
