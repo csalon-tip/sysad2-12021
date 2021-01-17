@@ -1,0 +1,96 @@
+---
+- name: CLONING PRELIM EXAM ON CENTOS
+  hosts: 
+   - centos 
+  vars_files:
+   - config.yml
+  roles:
+   - gitclone_centos
+
+- name: INSTALLING ENTERPRISE SERVICE ON CENTOS
+  hosts: 
+   - centos
+  vars_files:
+   - config.yml
+  roles:
+   - centosftp
+
+- name: INSTALLING MONITORING SERVICE ON CENTOS
+  hosts: 
+   - centos
+  vars_files:
+   - config.yml
+  roles:
+   - centosnagios
+
+- name: CHANGING MOTD ON CENTOS
+  hosts: 
+   - centos
+  vars_files:
+   - config.yml
+  roles:
+   - motd
+
+- name: CLONING PRELIM EXAM ON DEBIAN
+  hosts:
+   - debian
+  vars_files:
+   - config.yml
+  roles:
+   - gitclone_debian
+
+- name: INSTALLING ENTERPRISE SERVICE ON DEBIAN
+  hosts:
+   - debian
+  vars_files:
+   - config.yml
+  roles:
+   - debianftp
+
+- name: INSTALLING MONITORING SERVICE ON DEBIAN
+  hosts:
+   - debian
+  vars_files:
+   - config.yml
+  roles:
+   - debiannagios
+
+- name: CHANGING MOTD ON DEBIAN
+  hosts:
+   - debian
+  vars_files:
+   - config.yml
+  roles:
+   - motd
+
+- name: CLONING PRELIM EXAM ON OPENSUSE
+  hosts:
+   - suse
+  vars_files:
+   - config.yml
+  roles:
+   - gitclone_suse
+
+- name: INSTALLING ENTERPRISE SERVICE ON OPENSUSE
+  hosts:
+   - suse
+  vars_files:
+   - config.yml
+  roles:
+   - suseftp
+
+- name: INSTALLING MONITORING SERVICE ON OPENSUSE
+  hosts:
+   - suse
+  vars_files:
+   - config.yml
+  roles:
+   - susenagios
+
+- name: CHANGING MOTD ON OPENSUSE
+  hosts:
+   - suse
+  vars_files:
+   - config.yml
+  roles:
+   - motd
